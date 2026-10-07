@@ -18,7 +18,6 @@ COPY --from=build /app/dist ./dist
 
 # Oura tokens live here; mount it as a volume to survive restarts.
 RUN mkdir -p /app/data && chown node:node /app/data
-VOLUME /app/data
 
 USER node
 EXPOSE 3000
